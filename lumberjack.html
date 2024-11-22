@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumberjack Game</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1a1a2e, #16213e);
+            padding: 50px 0;
+            color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+        }
+
+        .iframe-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .btn-play-again {
+            margin-top: 20px;
+            padding: 10px 30px;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, #6610f2, #6f42c1);
+            border: none;
+            color: white;
+            border-radius: 25px;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        .btn-play-again:hover {
+            background: linear-gradient(135deg, #6f42c1, #6610f2);
+            transform: scale(1.1);
+        }
+
+        .btn-play-again i {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">
+            <i class="fas fa-tree"></i> Lumberjack Game
+        </h1>
+        <div class="iframe-container">
+            <iframe title="Lumberjack Game" src="https://tbot.xyz/lumber/"></iframe>
+        </div>
+        <button class="btn-play-again" onclick="reloadGame()">
+            <i class="fas fa-redo-alt"></i> Play Again
+        </button>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        function reloadGame() {
+            document.querySelector('iframe').src += '';
+        }
+    </script>
+</body>
+
+</html>
